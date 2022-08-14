@@ -4,4 +4,6 @@ function volume($vertical, $horizontal, $height) {
 }
 
 volume(5,10,8);
+echo volume();
 ?>
+
