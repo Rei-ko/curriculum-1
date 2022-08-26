@@ -30,24 +30,40 @@ if($question3 == 'select'){
 	$result_3 = "残念･･･";
 }
 //選択した回答と正解が一致していれば「正解！」、一致していなければ「残念・・・」と出力される処理を組んだ関数を作成する
-
 ?>
-<p><?php echo $name; ?><!--POST通信で送られてきた名前を表示-->さんの結果は・・・？</p>
-<?php echo '<br>'; ?>
-<p>①の答え
-<?php echo '<br>'; ?>
-<?php echo $result_1 ?>
-</p>
-<!--作成した関数を呼び出して結果を表示-->
 
-<p>②の答え
-<?php echo '<br>'; ?>
-<?php echo $result_2 ?>
-</p>
-<!--作成した関数を呼び出して結果を表示-->
-
-<p>③の答え
-<?php echo '<br>'; ?>
-<?php echo $result_3 ?>
-</p>
-<!--作成した関数を呼び出して結果を表示-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="answer.css">
+  <style></style>
+</head>
+<body>
+   <div id="wrapper">
+      <div class="p">
+        <br>
+        <p><?php echo $name; ?><!--POST通信で送られてきた名前を表示-->さんの結果は・・・？</p>
+      </div>
+      <div class="h3">
+        <p>①の答え
+		<br>	
+        <?php echo $result_1 ?>
+        </p>
+        <!--作成した関数を呼び出して結果を表示-->
+        <p>②の答え
+        <br>
+        <?php echo $result_2 ?>
+        </p>
+        <!--作成した関数を呼び出して結果を表示-->
+        <p>③の答え
+        <br>
+        <?php echo $result_3 ?>
+        </p>
+      </div> 
+   </div>
+</body>
+</html>
