@@ -1,7 +1,6 @@
 <?php
 //POST送信で送られてきた名前を受け取って変数を作成
 $name = $_POST['name'];
-echo '<br>';
 //①画像を参考に問題文の選択肢の配列を作成してください。
 //② ①で作成した、配列から正解の選択肢の変数を作成してください
 $question1 = array();
@@ -30,7 +29,6 @@ $answer3 = 'select';
 <body>
    <div id="wrapper">
       <div class="p">
-         <br>
          <p>お疲れ様です<?php echo $name; ?><!--POST通信で送られてきた名前を出力-->さん</p>
       </div>
       <div class="h2">

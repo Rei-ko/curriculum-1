@@ -11,7 +11,6 @@ input::placeholder {
 
 .h1 { 
     font-size: 20px;
-    /* font-family: MS明朝; */
     color: white; 
     border-bottom: 1px solid white;
     text-align: center;
@@ -21,4 +20,9 @@ input::placeholder {
 .botan {
     text-align: center;
     position:relative;top:35%;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
