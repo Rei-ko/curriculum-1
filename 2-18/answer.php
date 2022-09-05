@@ -12,33 +12,14 @@ $question3 = $_POST['question3']; //ラジオボタンの内容を受け取る
 $answer3 = $_POST['answer3'];   //hiddenで送られた正解を受け取る
 
 //結果の判定
-$answer1 = 80;
-$answer2 = 'HTML';
-$answer3 = 'select';
 
-if ($answer1 == 80 || $answer2 == 'HTML' || $answer3 == 'select'){
-  $result_1 = "正解！";
-}else if($answer1 == 22 || $answer1 == 21 || $answer1 == 20 || $answer2 == 'Python' || $answer2 == 'JAVA' || $answer2 == 'PHP' || $answer3 == 'join' || $answer3 == 'insert' || $answer3 == 'updata') {
-  $result_1 = "残念･･･";
+function juge($question, $answer){
+if($question == $answer){
+  echo "正解！";
+}else{
+  echo "残念・・・";
 }
-// if($question1 == 80){
-// 	$result_1 = "正解！";
-// }else{
-// 	$result_1 = "残念･･･";
-// }
-
-// if($question2 == 'HTML'){
-// 	$result_2 = "正解！";
-// }else{
-// 	$result_2 = "残念･･･";
-// }
-
-// if($question3 == 'select'){
-// 	$result_3 = "正解！";
-// }else{
-// 	$result_3 = "残念･･･";
-// }
-//選択した回答と正解が一致していれば「正解！」、一致していなければ「残念・・・」と出力される処理を組んだ関数を作成する
+}
 ?>
 
 <!DOCTYPE html>
@@ -60,17 +41,17 @@ if ($answer1 == 80 || $answer2 == 'HTML' || $answer3 == 'select'){
       <div class="h3">
         <p>①の答え
 	      <br>	
-        <?php echo $result_1 ?>
+        <?php juge($question1, $answer1) ?>
         </p>
         <!--作成した関数を呼び出して結果を表示-->
         <p>②の答え
         <br>
-        <?php echo $result_1 ?>
+        <?php juge($question2, $answer2) ?>
         </p>
         <!--作成した関数を呼び出して結果を表示-->
         <p>③の答え
         <br>
-        <?php echo $result_1 ?>
+        <?php juge($question3, $answer3) ?>
         </p>
       </div> 
    </div>
